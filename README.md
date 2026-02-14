@@ -82,7 +82,7 @@ CLOUDINARY_API_SECRET=your_api_secret
 Start backend:
 
 ```
-npm run dev
+npm run server
 ```
 
 Backend runs on:
