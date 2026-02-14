@@ -27,6 +27,16 @@ A full-stack real-time chat application built using the MERN stack with Socket.i
 
 ---
 
+## 🔌 How Real-Time Works
+
+- Socket.io establishes a WebSocket connection between client and server.
+- When a user sends a message:
+  - It is stored in MongoDB.
+  - Socket emits the message instantly to the receiver.
+- No page refresh required.
+
+---
+
 ## ✨ Features
 
 - 🔐 User Registration & Login (JWT Authentication)
@@ -42,59 +52,68 @@ A full-stack real-time chat application built using the MERN stack with Socket.i
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+### Clone Repository
 
-git clone https://github.com/vivekvaria24/Chat-App.git  
-cd Chat-App  
+```
+git clone https://github.com/vivekvaria24/Chat-App.git
+cd Chat-App
+```
 
 ---
 
-### 2️⃣ Setup Backend
+## 🔧 Backend Setup
 
-cd backend  
-npm install  
+```
+cd backend
+npm install
+```
 
-Create a `.env` file inside backend folder and add:
+Create a `.env` file inside **backend** and paste the following:
 
-PORT=5000  
-MONGO_URI=your_mongodb_connection_string  
-JWT_SECRET=your_secret_key  
-CLOUDINARY_CLOUD_NAME=your_cloud_name  
-CLOUDINARY_API_KEY=your_api_key  
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_super_secret_key
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
+```
 
-Run backend server:
+Start backend:
 
-npm run dev  
+```
+npm run dev
+```
+
+Backend runs on:
+```
+http://localhost:5000
+```
 
 ---
 
-### 3️⃣ Setup Frontend
+## 🎨 Frontend Setup
 
 Open new terminal:
 
-cd frontend  
-npm install  
-npm run dev  
+```
+cd frontend
+npm install
+```
 
-Create a `.env` file inside the frontend folder and add:
+Create a `.env` file inside **frontend** and paste:
 
-VITE_BACKEND_URL='http://localhost:5000'
+```env
+VITE_BACKEND_URL=http://localhost:5000
+```
 
-Frontend runs on:  
-http://localhost:5173  
+Start frontend:
 
-Backend runs on:  
-http://localhost:5000  
+```
+npm run dev
+```
 
----
-
-## 🔌 How Real-Time Works
-
-- Socket.io establishes a WebSocket connection between client and server.
-- When a user sends a message:
-  - It is stored in MongoDB.
-  - Socket emits the message instantly to the receiver.
-- No page refresh required.
-
----
+Frontend runs on:
+```
+http://localhost:5173
+```
