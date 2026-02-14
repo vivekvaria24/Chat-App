@@ -31,6 +31,7 @@ A full-stack real-time chat application built using the MERN stack with Socket.i
 
 - 🔐 User Registration & Login (JWT Authentication)
 - 💬 Real-Time Messaging using Socket.io
+- 🖼️ Image Upload via Cloudinary
 - 📡 Instant message updates without refresh
 - 👤 User-based chat system
 - 📱 Fully Responsive UI
@@ -39,32 +40,11 @@ A full-stack real-time chat application built using the MERN stack with Socket.i
 
 ---
 
-## 📂 Project Structure
-
-Chat-App/
-
-├── frontend/  
-│   ├── src/  
-│   ├── public/  
-│   ├── components/  
-│   └── ...  
-
-├── backend/  
-│   ├── controllers/  
-│   ├── routes/  
-│   ├── models/  
-│   ├── config/  
-│   └── ...  
-
-└── README.md  
-
----
-
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/your-username/Chat-App.git  
+git clone https://github.com/vivekvaria24/Chat-App.git  
 cd Chat-App  
 
 ---
@@ -79,6 +59,9 @@ Create a `.env` file inside backend folder and add:
 PORT=5000  
 MONGO_URI=your_mongodb_connection_string  
 JWT_SECRET=your_secret_key  
+CLOUDINARY_CLOUD_NAME=your_cloud_name  
+CLOUDINARY_API_KEY=your_api_key  
+CLOUDINARY_API_SECRET=your_api_secret
 
 Run backend server:
 
@@ -93,6 +76,10 @@ Open new terminal:
 cd frontend  
 npm install  
 npm run dev  
+
+Create a `.env` file inside the frontend folder and add:
+
+VITE_BACKEND_URL='http://localhost:5000'
 
 Frontend runs on:  
 http://localhost:5173  
